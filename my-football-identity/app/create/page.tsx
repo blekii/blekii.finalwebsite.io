@@ -35,7 +35,7 @@ export default function Home() {
     // Save for dashboard later
     localStorage.setItem("userStats", JSON.stringify(stats));
 
-    alert("Profile saved! (Radar chart + dashboard coming next)");
+    alert("Profile saved!");
   }
 
   return (

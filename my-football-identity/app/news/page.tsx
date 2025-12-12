@@ -33,7 +33,6 @@ export default function NewsPage() {
         <p className="text-gray-400">Loading news...</p>
       )}
 
-      {/* Updated Grid: 1 → 2 → 3 → 4 columns */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {articles.map((article, i) => (
           <a
@@ -42,7 +41,7 @@ export default function NewsPage() {
             target="_blank"
             className="bg-[#2d0f47] rounded-lg shadow-lg border border-purple-900/40 hover:bg-[#3e1a61] transition overflow-hidden flex flex-col"
           >
-            {/* Bigger Image Preview */}
+            {/* Image Preview */}
             {article.urlToImage && (
               <img
                 src={article.urlToImage}

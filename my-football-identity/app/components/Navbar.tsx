@@ -6,8 +6,6 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-[#241038] shadow-lg border-b border-white-900/40">
       <div className="w-full h-16 px-6 flex items-center justify-between">
-        
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-white tracking-wide">
           <span>My Football Identity</span>
         </Link>

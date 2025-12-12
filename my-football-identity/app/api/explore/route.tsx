@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 
-const DEFAULT_LEAGUES = [39, 140, 78, 135, 61]; // EPL, LaLiga, Bundesliga, Serie A, Ligue 1
+// Top 5 leagues
+const DEFAULT_LEAGUES = [39, 140, 78, 135, 61];
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const query = searchParams.get("q");
-  const league = searchParams.get("league"); // NEW
+  const league = searchParams.get("league");
 
   if (!query) {
     return NextResponse.json({ error: "Missing player query" }, { status: 400 });

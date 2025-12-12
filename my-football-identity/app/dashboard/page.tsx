@@ -42,7 +42,7 @@ export default function Dashboard() {
       const res = await fetch("/data/eafc_players.json");
       const players = await res.json();
 
-      // Remove goalkeepers (Option A)
+      // Remove goalkeepers
       const outfield = players.filter((p: any) => p.position !== "GK");
 
       // Compute similarity
@@ -80,9 +80,10 @@ export default function Dashboard() {
     loadNews();
   }, []);
 
-  // Loading or Missing Profile
+  // Loading
   if (!loaded) return <main className="text-white p-6">Loading...</main>;
 
+  // No profile
   if (!stats) {
     return (
       <main className="min-h-screen bg-black text-white p-6 flex flex-col items-center justify-center">

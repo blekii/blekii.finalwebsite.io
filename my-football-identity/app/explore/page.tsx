@@ -139,10 +139,7 @@ export default function ExplorePlayers() {
         ))}
       </div>
 
-      {/* Loading */}
       {loading && <p className="text-gray-300">Searching players...</p>}
-
-      {/* Error */}
       {error && <p className="text-red-400">{error}</p>}
 
       {/* Player Grid */}
@@ -180,6 +177,7 @@ export default function ExplorePlayers() {
                 </div>
               )}
 
+              {/* Position */}
               <p className="text-center text-purple-200 mb-2">
                 Position: {position}
               </p>
@@ -192,6 +190,7 @@ export default function ExplorePlayers() {
                 Weight: {player.weight}kg
               </p>
               
+              {/* Stats (hover only) */}
               {stats && (
                 <div
                   className="absolute left-0 top-full mt-2 w-full bg-[#1b0f2d] p-4 rounded-lg 
@@ -225,6 +224,7 @@ export default function ExplorePlayers() {
         })}
       </div>
 
+      {/* No players found */}
       {!loading && !error && filteredPlayers.length === 0 && players.length > 0 && (
         <p className="text-gray-400 mt-6">No players match this position filter.</p>
       )}
